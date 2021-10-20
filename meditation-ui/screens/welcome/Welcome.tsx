@@ -11,8 +11,6 @@ import { styles } from "./Welcome.styles";
 interface Props { }
 
 const Welcome: FunctionComponent<Props> = (props) => {
-    const navigation = useNavigation<any>();
-
     return (
         <View style={styles.container}>
             <View style={styles.topSection}>
@@ -32,16 +30,7 @@ const Welcome: FunctionComponent<Props> = (props) => {
                 </View>
             </View>
 
-            <View style={{
-                display: "flex",
-                flex: 1,
-                width: "100%",
-                height: "100%",
-                paddingHorizontal: 40,
-                backgroundColor: "transparent",
-                marginVertical: 40,
-                justifyContent: "flex-end"
-            }}>
+            <View style={styles.callToAction}>
                 <Button color={"#EBEAEC"} textColor={"#3F414E"} label={"Get Started"} onPress={() => { }} />
             </View>
 

@@ -69,5 +69,15 @@ export let styles = StyleSheet.create({
         overflow: "hidden",
         backgroundColor: "transparent",
         marginVertical: 50
+    },
+    callToAction: {
+        display: "flex",
+        flex: 1,
+        width: "100%",
+        height: "100%",
+        paddingHorizontal: 40,
+        backgroundColor: "transparent",
+        marginVertical: 40,
+        justifyContent: "flex-end"
     }
 });
