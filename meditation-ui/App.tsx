@@ -6,6 +6,7 @@ import { Onboarding } from './screens/onboarding';
 import { Login } from './screens/login';
 import { Signup } from './screens/signup';
 import { Welcome } from './screens/welcome';
+import { ChooseTopic } from './screens/chooseTopic';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,7 @@ const App: FunctionComponent = () => {
           <Stack.Screen name="Login" options={{ headerShown: false }} component={Login} />
           <Stack.Screen name="Signup" options={{ headerShown: false }} component={Signup} />
           <Stack.Screen name="Welcome" options={{ headerShown: false }} component={Welcome} />
+          <Stack.Screen name="ChooseTopic" options={{ headerShown: false }} component={ChooseTopic} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar backgroundColor={"transparent"} barStyle={"dark-content"} translucent />

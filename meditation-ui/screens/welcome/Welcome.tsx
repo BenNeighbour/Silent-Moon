@@ -10,7 +10,9 @@ import { styles } from "./Welcome.styles";
 
 interface Props { }
 
-const Welcome: FunctionComponent<Props> = (props) => {
+const Welcome: FunctionComponent<Props> = () => {
+    const navigation = useNavigation<any>();
+
     return (
         <View style={styles.container}>
             <View style={styles.topSection}>
@@ -31,9 +33,10 @@ const Welcome: FunctionComponent<Props> = (props) => {
             </View>
 
             <View style={styles.callToAction}>
-                <Button color={"#EBEAEC"} textColor={"#3F414E"} label={"Get Started"} onPress={() => { }} />
+                <Button color={"#EBEAEC"} textColor={"#3F414E"} label={"Get Started"} onPress={() => { 
+                    navigation.navigate("ChooseTopic");
+                }} />
             </View>
-
         </View>
     );
 };
