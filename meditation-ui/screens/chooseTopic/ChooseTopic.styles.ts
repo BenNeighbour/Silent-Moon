@@ -8,7 +8,7 @@ export let styles = StyleSheet.create({
     topSection: {
         display: "flex",
         width: "100%",
-        paddingVertical: 35,
+        paddingTop: 35,
         paddingHorizontal: 10
     },
     title: {
