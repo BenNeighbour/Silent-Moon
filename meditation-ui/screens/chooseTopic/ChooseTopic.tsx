@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { Text, View } from "react-native";
-import { ImprovePerformanceCard, IncreaseHappinessCard, PersonalGrowthCard, ReduceAnxietyCard, ReduceStressCard } from "./cards";
+import { BetterSleepCard, ImprovePerformanceCard, IncreaseHappinessCard, PersonalGrowthCard, ReduceAnxietyCard, ReduceStressCard } from "./cards";
 import { styles } from "./ChooseTopic.styles";
 
 interface Props { }
@@ -16,13 +16,13 @@ const ChooseTopic: FunctionComponent<Props> = () => {
             <View style={styles.optionsTable}>
                 <View style={styles.column}>
                     <ReduceStressCard />
-                    <PersonalGrowthCard />
                     <IncreaseHappinessCard />
+                    <PersonalGrowthCard />
                 </View>
                 <View style={styles.column}>
                     <ImprovePerformanceCard />
                     <ReduceAnxietyCard />
-                    <ReduceStressCard />
+                    <BetterSleepCard />
                 </View>
             </View>
         </View>

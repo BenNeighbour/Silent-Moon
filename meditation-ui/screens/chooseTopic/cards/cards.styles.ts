@@ -10,6 +10,7 @@ export let styles = StyleSheet.create({
     title: {
         padding: 16,
         paddingTop: 0,
+        marginTop: 0,
         width: "100%",
         fontWeight: "bold",
         fontSize: 18,

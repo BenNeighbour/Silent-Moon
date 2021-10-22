@@ -3,3 +3,4 @@ export { default as IncreaseHappinessCard } from "./IncreaseHappinessCard";
 export { default as PersonalGrowthCard } from "./PersonalGrowthCard";
 export { default as ReduceAnxietyCard } from "./ReduceAnxietyCard";
 export { default as ReduceStressCard } from "./ReduceStressCard";
+export { default as BetterSleepCard } from "./BetterSleepCard";
