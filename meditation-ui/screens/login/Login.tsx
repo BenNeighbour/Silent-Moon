@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { FunctionComponent } from "react";
-import { Text, View } from "react-native";
+import { StatusBar, Text, View } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { SvgXml } from "react-native-svg";
 import { BackButton } from "../../components/backButton";
@@ -16,6 +16,8 @@ const Login: FunctionComponent<Props> = (props) => {
 
     return (
         <View style={styles.container}>
+            <StatusBar barStyle="dark-content" />
+
             <View style={styles.topSection}>
                 <SvgXml style={styles.topSectionBackdrop} xml={TopSection} />
                 <BackButton />

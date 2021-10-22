@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { View, Text } from "react-native";
+import { View, Text, StatusBar } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { Background } from "./svg/Background";
 import { Relaxing } from "./svg/Relaxing";
@@ -15,6 +15,8 @@ const Onboarding: FunctionComponent<Props> = (props) => {
 
     return (
         <View style={styles.container}>
+            <StatusBar barStyle="light-content" />
+
             <View style={styles.topSection}>
                 {/* Top Section */}
                 <SvgXml style={styles.logo} xml={LogoDark} width="170px" />

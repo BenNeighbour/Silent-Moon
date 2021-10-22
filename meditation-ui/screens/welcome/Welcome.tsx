@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { FunctionComponent } from "react";
-import { Text, View } from "react-native";
+import { StatusBar, Text, View } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { Button } from "../../components/button";
 import { LogoLight } from "../../components/logo/LogoLightSvg";
@@ -37,6 +37,8 @@ const Welcome: FunctionComponent<Props> = () => {
                     navigation.navigate("ChooseTopic");
                 }} />
             </View>
+
+            <StatusBar barStyle="light-content" />
         </View>
     );
 };

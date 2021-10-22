@@ -20,6 +20,7 @@ const App: FunctionComponent = () => {
           <Stack.Screen name="Signup" options={{ headerShown: false }} component={Signup} />
           <Stack.Screen name="Welcome" options={{ headerShown: false }} component={Welcome} />
           <Stack.Screen name="ChooseTopic" options={{ headerShown: false }} component={ChooseTopic} />
+          <Stack.Screen name="Home" options={{ headerShown: false }} component={ChooseTopic} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar backgroundColor={"transparent"} barStyle={"dark-content"} translucent />

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { View, Text } from "react-native";
+import { View, Text, StatusBar } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { BackButton } from "../../components/backButton";
 import { FacebookButton, GoogleButton } from "../../components/socialButton";
@@ -16,6 +16,8 @@ const Signup: FunctionComponent<Props> = (props) => {
 
     return (
         <View style={styles.container}>
+            <StatusBar barStyle="dark-content" />
+            
             <View style={styles.topSection}>
                 <SvgXml style={styles.topSectionBackdrop} xml={TopSection} />
                 <BackButton />
