@@ -34,18 +34,20 @@ const Login: FunctionComponent<Props> = (props) => {
                     <Text style={styles.loginWithEmailText}>Or log in with email</Text>
                     <View style={styles.formSection}>
                         {/* LOGIN FORM SECTION */}
-                        <LoginForm />
+                        <LoginForm onSubmit={() => {
+                            navigation.navigate("Welcome");
+                        }} />
                     </View>
 
-                    <View style={styles.callToAction}>
-                        {/* Call-to-action Section */}
-                        <Text style={styles.signUpText}>Dont't already have an account? <Text style={styles.signUpTextLink} onPress={() => {
-                            {/* Redirect to signup route */ }
-                            navigation.navigate("Signup");
-                        }}>Sign Up</Text></Text>
-                    </View>
                 </View>
             </KeyboardAwareScrollView>
+            <View style={styles.callToAction}>
+                {/* Call-to-action Section */}
+                <Text style={styles.signUpText}>Don't already have an account? <Text style={styles.signUpTextLink} onPress={() => {
+                    {/* Redirect to signup route */ }
+                    navigation.navigate("Signup");
+                }}>Sign Up</Text></Text>
+            </View>
         </View>
     );
 };

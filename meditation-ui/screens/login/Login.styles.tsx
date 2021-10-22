@@ -26,9 +26,7 @@ export let styles = StyleSheet.create({
     },
     formSection: {
         width: "100%",
-        alignItems: "stretch",
         display: "flex",
-        justifyContent: 'space-evenly'
     },
     callToAction: {
         display: "flex",
@@ -38,6 +36,7 @@ export let styles = StyleSheet.create({
         marginTop: "auto",
         textAlign: "center",
         alignItems: "center",
+        alignSelf: "flex-end",
     },
     signUpText: {
         textTransform: "uppercase",
@@ -45,7 +44,7 @@ export let styles = StyleSheet.create({
         letterSpacing: 0.75,
         color: "#A1A4B2",
         fontWeight: "400",
-        paddingVertical: 20
+        paddingVertical: 20,
     },
     signUpTextLink: {
         color: "#8E97FD"
@@ -68,7 +67,6 @@ export let styles = StyleSheet.create({
         padding: 0,
         display: "flex",
         width: "100%",
-        backgroundColor: "transparent",
-        alignItems: "center"
+        alignItems: "center",
     }
 });

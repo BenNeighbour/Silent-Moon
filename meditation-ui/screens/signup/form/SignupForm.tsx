@@ -14,7 +14,7 @@ const SignupForm: FunctionComponent<Props> = (props) => {
     return (
         <Formik
             initialValues={{ name: '', email: '', password: '', hasReadPrivacyPolicy: true }}
-            onSubmit={values => props.onSubmit()}
+            onSubmit={_ => props.onSubmit()}
         >
             {({ handleChange, handleBlur, handleSubmit, values, setFieldValue, errors, touched }) => (
                 <View>

@@ -1,12 +1,15 @@
 import React, { FunctionComponent } from 'react';
 import { StatusBar, StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Onboarding } from './screens/onboarding';
 import { Login } from './screens/login';
 import { Signup } from './screens/signup';
 import { Welcome } from './screens/welcome';
 import { ChooseTopic } from './screens/chooseTopic';
+import { enableScreens } from 'react-native-screens';
+import { createNativeStackNavigator } from "react-native-screens/native-stack"; 
+
+enableScreens();
 
 const Stack = createNativeStackNavigator();
 
