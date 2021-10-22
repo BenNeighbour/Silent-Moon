@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from "react";
-import { NativeSyntheticEvent, StyleProp, TextInput, TextInputFocusEventData, View, ViewStyle } from "react-native";
+import { NativeSyntheticEvent, StyleProp, StyleSheet, TextInput, TextInputFocusEventData, View, ViewStyle } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { styles } from "./Input.styles";
 import { Okay } from "./symbols/FieldOkaySymbol";
@@ -9,7 +9,7 @@ interface Props {
     value: string;
     onChangeText: (e: any) => any;
     placeholder: string;
-    style?: StyleProp<ViewStyle> | {};
+    style?: StyleSheet.NamedStyles<any> | {};
     onBlur?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
     secureTextEntry?: boolean;
     error?: string;
@@ -18,20 +18,20 @@ interface Props {
 }
 
 const Input: FunctionComponent<Props> = (props) => {
-    const [isSecureEntry, setIsSecureEntry] = useState<boolean>(props.secureTextEntry || false);
+    const [secureTextEntry, setIsSecureEntry] = useState<boolean>(props.secureTextEntry || false);
 
     return (
-        <View style={Object.assign(props.style, styles.input)}>
+        <View style={{...props.style, ...styles.input}}>
             <TextInput
                 {...props}
-                secureTextEntry={isSecureEntry}
-                style={{ flex: 1 }}
+                style={{ flex: 1, paddingVertical: 20, fontSize: 16 }}
+                secureTextEntry
                 editable
                 focusable
             />
             {props.withAsyncValidation ? <SvgXml onPress={() => {
-                if (props.secureTextEntry) setIsSecureEntry(!isSecureEntry);
-            }} style={{
+                if (props.secureTextEntry) setIsSecureEntry(!secureTextEntry);
+            }} style={{  
                 alignSelf: "center",
                 height: "100%",
                 paddingVertical: 10,
