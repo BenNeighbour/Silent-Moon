@@ -5,8 +5,6 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         display: "flex",
         width: "100%",
-
-        // Shadow
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -26,5 +24,15 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         paddingVertical: 13,
         paddingHorizontal: 10,
+    },
+    tabLogo: {
+        paddingVertical: 10, 
+        paddingHorizontal: 10, 
+        borderRadius: 18
+    },
+    tabLabel: {
+        fontSize: 14, 
+        fontWeight: "bold", 
+        paddingTop: 5
     }
 });

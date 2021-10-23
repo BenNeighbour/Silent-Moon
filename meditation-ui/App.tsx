@@ -8,7 +8,7 @@ import { Welcome } from './screens/welcome';
 import { ChooseTopic } from './screens/chooseTopic';
 import { enableScreens } from 'react-native-screens';
 import { createNativeStackNavigator } from "react-native-screens/native-stack"; 
-import { MainNavigator } from './components/bottomTab';
+import { MainNavigator } from './navigation/mainNavigation';
 
 enableScreens();
 

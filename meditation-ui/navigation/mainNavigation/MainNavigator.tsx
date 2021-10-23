@@ -9,9 +9,7 @@ interface Props { }
 
 const MainNavigator: FunctionComponent<Props> = (props) => {
     return (
-        <Tab.Navigator
-            tabBar={props => <TabBar {...props} />}
-        >
+        <Tab.Navigator tabBar={(props: any) => <TabBar {...props} />}>
             <Tab.Screen options={{ headerShown: false }} name="Home" component={Home} />
             <Tab.Screen options={{ headerShown: false }} name="Sleep" component={Home} />
             <Tab.Screen options={{ headerShown: false }} name="Meditate" component={Home} />
