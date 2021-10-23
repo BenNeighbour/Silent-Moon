@@ -8,6 +8,7 @@ import { Welcome } from './screens/welcome';
 import { ChooseTopic } from './screens/chooseTopic';
 import { enableScreens } from 'react-native-screens';
 import { createNativeStackNavigator } from "react-native-screens/native-stack"; 
+import { MainNavigator } from './components/bottomTab';
 
 enableScreens();
 
@@ -23,7 +24,8 @@ const App: FunctionComponent = () => {
           <Stack.Screen name="Signup" options={{ headerShown: false }} component={Signup} />
           <Stack.Screen name="Welcome" options={{ headerShown: false }} component={Welcome} />
           <Stack.Screen name="ChooseTopic" options={{ headerShown: false }} component={ChooseTopic} />
-          <Stack.Screen name="Home" options={{ headerShown: false }} component={ChooseTopic} />
+
+          <Stack.Screen name="MainNavigator" options={{ headerShown: false }} component={MainNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar backgroundColor={"transparent"} barStyle={"dark-content"} translucent />

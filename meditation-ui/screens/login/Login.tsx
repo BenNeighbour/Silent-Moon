@@ -29,7 +29,7 @@ const Login: FunctionComponent<Props> = (props) => {
 
                     {/* GOOGLE/FACEBOOK SSO BUTTONS */}
                     <FacebookButton label={"Continue with Facebook"} onPress={() => { }} />
-                    <GoogleButton label={"Continue with Google"} onPress={() => { }} />
+                    <GoogleButton label={"Continue with Google"} onPress={() => navigation.navigate("MainNavigator")} />
 
                     <Text style={styles.loginWithEmailText}>Or log in with email</Text>
                     <View style={styles.formSection}>

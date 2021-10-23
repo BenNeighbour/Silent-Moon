@@ -21,7 +21,7 @@ const Checkbox: FunctionComponent<Props> = (props) => {
                 flexDirection: 'row',
                 alignItems: 'center',
                 display: "flex",
-                width: "100%"
+                width: "100%",
             }}>
                 <Text style={{
                     fontSize: 18,
@@ -29,6 +29,7 @@ const Checkbox: FunctionComponent<Props> = (props) => {
                     {props.children}
                 </Text>
                 <View style={{
+                    display: "flex",
                     alignSelf: "flex-end",
                     marginLeft: "auto",
                     backgroundColor: "transparent",
@@ -37,19 +38,21 @@ const Checkbox: FunctionComponent<Props> = (props) => {
                     height: 20,
                     borderWidth: 2,
                     borderColor: props.color,
-                    paddingVertical: 3,
+                    // padding: 3,
                 }}>
                     <View style={{
                         flex: 1,
                         justifyContent: 'center',
                         alignItems: 'center',
-                        display: "flex"
+                        display: "flex",
+                        height: "100%",
+                        width: "100%",
+                        overflow: "hidden"
                     }}>
                         {props.checked ? <SvgXml style={{ width: 10, height: 10 }} xml={Tick} /> : <View style={{width: 10, height: 10}} />}
                     </View>
                 </View>
             </View>
-
         </TouchableHighlight>
     );
 };
