@@ -1,6 +1,6 @@
 import { Platform, StatusBar, StyleSheet } from "react-native";
 
-export let styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
         display: "flex",
         width: "100%",

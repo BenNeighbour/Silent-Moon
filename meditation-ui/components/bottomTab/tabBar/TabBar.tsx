@@ -14,7 +14,6 @@ interface Props {
 }
 
 const TabBar: FunctionComponent<any> = ({ state, descriptors, navigation }) => {
-
     return (
         <View style={styles.container}>
             {state.routes.map((route: any, index: number) => {
@@ -49,7 +48,6 @@ const TabBar: FunctionComponent<any> = ({ state, descriptors, navigation }) => {
                 };
 
                 const icon = route.name === "Home" ? <HomeIcon fill={isFocused ? "#FFFFFF" : "#A0A3B1"} /> : route.name === "Sleep" ? <SleepIcon fill={isFocused ? "#FFFFFF" : "#A0A3B1"} /> : route.name === "Meditate" ? <MeditateIcon fill={isFocused ? "#FFFFFF" : "#A0A3B1"} /> : <MusicIcon fill={isFocused ? "#FFFFFF" : "#A0A3B1"} />;
-
                 return (
                     <Pressable
                         key={index}
