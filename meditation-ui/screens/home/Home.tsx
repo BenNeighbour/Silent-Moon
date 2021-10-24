@@ -3,7 +3,9 @@ import { StatusBar, Text, View } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { LogoDark } from "../../components/logo/LogoDarkSvg";
 import { styles } from "./Home.styles";
+import HomeCard from "./homeCard/HomeCard";
 import RecommendedSection from "./recommendedSection/RecommendedSection";
+import Basics from "./homeCard/svg/Basics.svg";
 
 interface Props { }
 
@@ -21,8 +23,10 @@ const Home: FunctionComponent<Props> = () => {
                 <Text style={styles.title}>Good Morning, Asfar</Text>
                 <Text style={styles.details}>We Wish you have a good day</Text>
 
-                {/* MUSIC SECTION */}
-                <View>
+                {/* CARD SECTION */}
+                <View style={styles.cardSection}>
+                    <HomeCard title={"Basics"} contentColor={"light"} type={"Course"} backgroundColor={"#8E97FD"} duration={"3-10 min"} svg={Basics} />
+                    <HomeCard title={"Basics"} contentColor={"light"} type={"Course"} backgroundColor={"#8E97FD"} duration={"3-10 min"} svg={Basics} />
                 </View>
 
                 {/* RECOMMENDED SECTION */}
