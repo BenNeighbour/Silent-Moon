@@ -24,15 +24,23 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         paddingVertical: 13,
         paddingHorizontal: 10,
+        alignContent: "center"
     },
     tabLogo: {
-        paddingVertical: 10, 
-        paddingHorizontal: 10, 
-        borderRadius: 18
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        alignSelf: "center",
     },
     tabLabel: {
-        fontSize: 13, 
-        fontWeight: "400", 
+        fontSize: 13,
+        fontWeight: "400",
         paddingTop: 5
+    },
+    hoverBackground: {
+        position: "absolute",
+        height: 46,
+        width: 46,
+        alignSelf: "center",
+        borderRadius: 18
     }
 });

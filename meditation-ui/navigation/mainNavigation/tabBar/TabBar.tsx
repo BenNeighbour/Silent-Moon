@@ -51,7 +51,8 @@ const TabBar: FunctionComponent = ({ state, descriptors, navigation }: any) => {
                         onLongPress={onLongPress}
                         style={styles.tab}
                     >
-                        <View style={Object.assign({ backgroundColor: isFocused ? "#8E97FD" : "transparent" }, styles.tabLogo)}>
+                        <View style={styles.tabLogo}>
+                            <View style={Object.assign({backgroundColor: isFocused ? "#8E97FD" : "transparent"}, styles.hoverBackground)} />
                             {getTabLogo(route.name, isFocused)}
                         </View>
                         <Text style={Object.assign({ color: isFocused ? "#8E97FD" : "#A0A3B1" }, styles.tabLabel)}>

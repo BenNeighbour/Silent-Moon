@@ -7,7 +7,7 @@ const Tab = createBottomTabNavigator();
 
 interface Props { }
 
-const MainNavigator: FunctionComponent<Props> = (props) => {
+const MainNavigator: FunctionComponent<Props> = () => {
     return (
         <Tab.Navigator tabBar={(props: any) => <TabBar {...props} />}>
             <Tab.Screen options={{ headerShown: false }} name="Home" component={Home} />
