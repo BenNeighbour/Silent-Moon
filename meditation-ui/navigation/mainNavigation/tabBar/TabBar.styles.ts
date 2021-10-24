@@ -31,8 +31,8 @@ export const styles = StyleSheet.create({
         borderRadius: 18
     },
     tabLabel: {
-        fontSize: 14, 
-        fontWeight: "bold", 
+        fontSize: 13, 
+        fontWeight: "400", 
         paddingTop: 5
     }
 });

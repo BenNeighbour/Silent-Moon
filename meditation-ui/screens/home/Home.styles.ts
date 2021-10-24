@@ -8,18 +8,13 @@ export const styles = StyleSheet.create({
         display: "flex",
         backgroundColor: "#FFFFFF",
         paddingHorizontal: 20,
-        alignItems: "center"
     },
     topSection: {
         display: "flex",
-        flex: 1,
-        paddingVertical: 30,
         width: "100%",
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         alignItems: "center",
         alignContent: "center",
-        alignSelf: "center",
-        justifyContent: "center",
         backgroundColor: "transparent",
     },
     logo: {
@@ -31,9 +26,21 @@ export const styles = StyleSheet.create({
     mainSection: {
         display: "flex",
         width: "100%",
-        paddingHorizontal: 20,
         alignContent: "center",
         flex: 1,
-        height: "100%"
+        height: "100%",
+        marginTop: 10
+    },
+    title: {
+        width: "100%",
+        color: "#3F414E",
+        fontWeight: "bold",
+        fontSize: 29,
+    },
+    details: {
+        width: "100%",
+        color: "#A1A4B2",
+        fontWeight: "100",
+        fontSize: 19,
     }
 });
