@@ -6,8 +6,7 @@ export const styles = StyleSheet.create({
         margin: 0,
         padding: 0,
         display: "flex",
-        backgroundColor: "#FFFFFF",
-        paddingHorizontal: 20,
+        backgroundColor: "#FFFFFF",        
     },
     topSection: {
         display: "flex",
@@ -21,7 +20,7 @@ export const styles = StyleSheet.create({
         zIndex: 3,
         margin: 'auto',
         position: "relative",
-        paddingVertical: 35
+        paddingVertical: 20
     },
     mainSection: {
         display: "flex",
@@ -36,11 +35,13 @@ export const styles = StyleSheet.create({
         color: "#3F414E",
         fontWeight: "bold",
         fontSize: 29,
+        paddingHorizontal: 20,
     },
     details: {
         width: "100%",
         color: "#A1A4B2",
         fontWeight: "100",
         fontSize: 19,
+        paddingHorizontal: 20,
     }
 });
