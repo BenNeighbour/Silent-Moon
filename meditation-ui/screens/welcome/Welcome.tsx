@@ -1,11 +1,10 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { FunctionComponent } from "react";
 import { StatusBar, Text, View } from "react-native";
-import { SvgXml } from "react-native-svg";
 import { Button } from "../../components/button";
-import { LogoLight } from "../../components/logo/LogoLightSvg";
-import { RelaxingBackground } from "./svg/RelaxingBackgroundSvg";
-import { Relaxing } from "./svg/RelaxingSvg";
+import LogoLight from "../../components/logo/LogoLight.svg";
+import Relaxing from "./svg/Relaxing.svg";
+import RelaxingBackground from "./svg/RelaxingBackground.svg";
 import { styles } from "./Welcome.styles";
 
 interface Props { }
@@ -17,7 +16,7 @@ const Welcome: FunctionComponent<Props> = () => {
         <View style={styles.container}>
             <View style={styles.topSection}>
                 {/* Top Section */}
-                <SvgXml style={styles.logo} xml={LogoLight} width="170px" />
+                <LogoLight style={styles.logo} />
             </View>
 
             <View style={styles.titleSection}>
@@ -27,8 +26,8 @@ const Welcome: FunctionComponent<Props> = () => {
 
             <View style={styles.bottomSection}>
                 <View style={styles.pictureSection}>
-                    <SvgXml style={{ zIndex: 10 }} xml={Relaxing} />
-                    <SvgXml style={{ position: "absolute", zIndex: 2 }} xml={RelaxingBackground} />
+                    <Relaxing style={{ zIndex: 10 }} />
+                    <RelaxingBackground style={{ position: "absolute", zIndex: 2 }} />
                 </View>
             </View>
 

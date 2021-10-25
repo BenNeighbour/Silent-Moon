@@ -2,12 +2,11 @@ import { useNavigation } from "@react-navigation/core";
 import React, { FunctionComponent } from "react";
 import { StatusBar, Text, View } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { SvgXml } from "react-native-svg";
 import { BackButton } from "../../components/backButton";
 import { FacebookButton, GoogleButton } from "../../components/socialButton";
 import LoginForm from "./form/LoginForm";
 import { styles } from "./Login.styles";
-import { TopSection } from "./TopSection/TopSectionSvg";
+import TopSection from "./TopSection/TopSection.svg";
 
 interface Props { }
 
@@ -19,7 +18,7 @@ const Login: FunctionComponent<Props> = (props) => {
             <StatusBar barStyle="dark-content" />
 
             <View style={styles.topSection}>
-                <SvgXml style={styles.topSectionBackdrop} xml={TopSection} />
+                <TopSection style={styles.topSectionBackdrop} />
                 <BackButton />
             </View>
 

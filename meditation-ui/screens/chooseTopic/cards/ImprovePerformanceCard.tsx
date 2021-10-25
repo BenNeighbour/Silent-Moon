@@ -1,15 +1,14 @@
 import React, { FunctionComponent } from "react";
 import { Text, View } from "react-native";
-import { SvgXml } from "react-native-svg";
 import { styles } from "./cards.styles";
-import { ImprovePerformanceSvg } from "./svg/ImprovePerformance";
+import ImprovePerformance from "./svg/ImprovePerformance.svg";
 
 interface Props {}
 
-const ImprovePerformanceCard: FunctionComponent<Props> = (props) => {
+const ImprovePerformanceCard: FunctionComponent<Props> = () => {
     return (
         <View style={Object.assign({backgroundColor: "#FA6E5A"}, styles.container)}>
-            <SvgXml style={{marginVertical: 10, alignSelf: "center"}} xml={ImprovePerformanceSvg} />
+            <ImprovePerformance style={{marginVertical: 10, alignSelf: "center"}} />
             <Text style={Object.assign({color: "#FEF9F3"}, styles.title)}>Improve Performance</Text>
         </View>
     );

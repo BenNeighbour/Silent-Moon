@@ -1,12 +1,11 @@
-import React, { FunctionComponent } from "react";
-import { View, Text, StatusBar } from "react-native";
-import { SvgXml } from "react-native-svg";
-import { Background } from "./svg/Background";
-import { Relaxing } from "./svg/Relaxing";
-import { styles } from "./Onboarding.styles";
-import { Button } from "../../components/button";
 import { useNavigation } from "@react-navigation/core";
-import { LogoDark } from "../../components/logo/LogoDarkSvg";
+import React, { FunctionComponent } from "react";
+import { StatusBar, Text, View } from "react-native";
+import { Button } from "../../components/button";
+import LogoDark from "../../components/logo/LogoDark.svg";
+import { styles } from "./Onboarding.styles";
+import Background from "./svg/Background.svg";
+import Relaxing from "./svg/Relaxing.svg";
 
 interface Props { }
 
@@ -19,9 +18,9 @@ const Onboarding: FunctionComponent<Props> = (props) => {
 
             <View style={styles.topSection}>
                 {/* Top Section */}
-                <SvgXml style={styles.logo} xml={LogoDark} width="170px" />
-                <SvgXml style={styles.background} xml={Background} width="100%" />
-                <SvgXml style={{ zIndex: 2 }} xml={Relaxing} />
+                <LogoDark style={styles.logo} />
+                <Background style={styles.background} width="100%" />
+                <Relaxing style={{ zIndex: 2 }} />
             </View>
 
             <View style={styles.bottomSection}>

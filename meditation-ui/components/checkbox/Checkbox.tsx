@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { Text, TouchableHighlight, View } from "react-native";
-import { SvgXml } from "react-native-svg";
-import { Tick } from "./TickSvg";
+import Tick from "./Tick.svg";
 
 interface Props {
     checked: boolean;
@@ -49,7 +48,7 @@ const Checkbox: FunctionComponent<Props> = (props) => {
                         width: "100%",
                         overflow: "hidden"
                     }}>
-                        {props.checked ? <SvgXml style={{ width: 10, height: 10 }} xml={Tick} /> : <View style={{width: 10, height: 10}} />}
+                        {props.checked ? <Tick style={{width: 10, height: 10}} /> : <View style={{width: 10, height: 10}} />}
                     </View>
                 </View>
             </View>

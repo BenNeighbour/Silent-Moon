@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from "react";
 import { Formik } from 'formik';
+import React, { FunctionComponent } from "react";
 import { Text, View } from "react-native";
-import { Input } from "../../../components/input";
 import { Button } from "../../../components/button";
+import { Input } from "../../../components/input";
 
 interface Props {
     onSubmit: () => any;

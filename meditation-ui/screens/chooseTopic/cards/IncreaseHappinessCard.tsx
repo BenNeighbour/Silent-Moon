@@ -1,15 +1,14 @@
 import React, { FunctionComponent } from "react";
 import { Text, View } from "react-native";
-import { SvgXml } from "react-native-svg";
 import { styles } from "./cards.styles";
-import { IncreaseHappinessSvg } from "./svg/IncreaseHappiness";
+import IncreaseHappiness from "./svg/IncreaseHappiness.svg";
 
 interface Props {}
 
-const IncreaseHappinessCard: FunctionComponent<Props> = (props) => {
+const IncreaseHappinessCard: FunctionComponent<Props> = () => {
     return (
         <View style={Object.assign({backgroundColor: "#FEB18F"}, styles.container)}>
-            <SvgXml style={{marginBottom: 10, alignSelf: "center"}} xml={IncreaseHappinessSvg} />
+            <IncreaseHappiness style={{marginBottom: 10, alignSelf: "center"}} />
             <Text style={Object.assign({ color: "#3F414E" }, styles.title)}>Increase Happiness</Text>
         </View>
     );

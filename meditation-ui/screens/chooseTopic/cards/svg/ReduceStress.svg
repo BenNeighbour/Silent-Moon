@@ -1,4 +1,3 @@
-export const ReduceStressSvg = `
 <svg width="164" height="130" viewBox="0 0 164 130" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1:2329)">
 <path d="M150.386 24.3394H147V41.3394H150.386V24.3394Z" fill="#9BA3FF"/>
@@ -221,4 +220,3 @@ export const ReduceStressSvg = `
 </clipPath>
 </defs>
 </svg>
-`;

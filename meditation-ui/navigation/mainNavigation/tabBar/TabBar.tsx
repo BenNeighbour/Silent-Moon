@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react";
 import { Pressable, Text, View } from "react-native";
 import HomeIcon from '../screenIcons/HomeIcon.svg';
-import SleepIcon from '../screenIcons/SleepIcon.svg';
 import MeditateIcon from '../screenIcons/MeditateIcon.svg';
 import MusicIcon from "../screenIcons/MusicIcon.svg";
+import SleepIcon from '../screenIcons/SleepIcon.svg';
 import UserIcon from "../screenIcons/UserIcon.svg";
 import { styles } from "./TabBar.styles";
 

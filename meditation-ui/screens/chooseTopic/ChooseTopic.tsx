@@ -1,9 +1,8 @@
 import React, { FunctionComponent } from "react";
 import { StatusBar, Text, View } from "react-native";
-import { SvgXml } from "react-native-svg";
 import { BetterSleepCard, ImprovePerformanceCard, IncreaseHappinessCard, PersonalGrowthCard, ReduceAnxietyCard, ReduceStressCard } from "./cards";
 import { styles } from "./ChooseTopic.styles";
-import { ChooseTopicBackgroundSvg } from "./ChooseTopicBackground";
+import ChooseTopicBackground from "./ChooseTopicBackground.svg";
 
 interface Props { }
 
@@ -12,7 +11,7 @@ const ChooseTopic: FunctionComponent<Props> = () => {
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" />
 
-            <SvgXml xml={ChooseTopicBackgroundSvg} style={{ zIndex: -1, position: "absolute", width: "100%", marginTop: 135 }} />
+            <ChooseTopicBackground style={{ zIndex: -1, position: "absolute", width: "100%", marginTop: 135 }} />
 
             <View style={styles.topSection}>
                 <Text style={styles.title}>What brings you {"\n"}<Text style={styles.subtitle}>to Silent Moon?</Text></Text>

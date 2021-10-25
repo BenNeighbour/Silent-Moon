@@ -1,13 +1,12 @@
 import React, { FunctionComponent } from "react";
 import { StatusBar, Text, View } from "react-native";
-import { SvgXml } from "react-native-svg";
-import { LogoDark } from "../../components/logo/LogoDarkSvg";
+import { Queue } from "react-native-spacing-system";
+import LogoDark from "../../components/logo/LogoDark.svg";
 import { styles } from "./Home.styles";
 import HomeCard from "./homeCard/HomeCard";
-import RecommendedSection from "./recommendedSection/RecommendedSection";
 import Basics from "./homeCard/svg/Basics.svg";
 import Relaxation from "./homeCard/svg/Relaxation.svg";
-import { Queue } from "react-native-spacing-system";
+import RecommendedSection from "./recommendedSection/RecommendedSection";
 
 interface Props { }
 
@@ -18,7 +17,7 @@ const Home: FunctionComponent<Props> = () => {
 
             <View style={styles.topSection}>
                 {/* Top Section */}
-                <SvgXml style={styles.logo} xml={LogoDark} width="170px" />
+                <LogoDark style={styles.logo} width="170px" />
             </View>
 
             <View style={styles.mainSection}>

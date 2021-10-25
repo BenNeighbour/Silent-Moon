@@ -1,13 +1,12 @@
+import { useNavigation } from "@react-navigation/core";
 import React, { FunctionComponent } from "react";
-import { View, Text, StatusBar } from "react-native";
-import { SvgXml } from "react-native-svg";
+import { StatusBar, Text, View } from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { BackButton } from "../../components/backButton";
 import { FacebookButton, GoogleButton } from "../../components/socialButton";
-import { TopSection } from "../login/TopSection/TopSectionSvg";
+import TopSection from "../login/TopSection/TopSection.svg";
 import SignupForm from "./form/SignupForm";
 import { styles } from "./Signup.styles";
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { useNavigation } from "@react-navigation/core";
 
 interface Props { }
 
@@ -19,7 +18,7 @@ const Signup: FunctionComponent<Props> = (props) => {
             <StatusBar barStyle="dark-content" />
             
             <View style={styles.topSection}>
-                <SvgXml style={styles.topSectionBackdrop} xml={TopSection} />
+                <TopSection style={styles.topSectionBackdrop} />
                 <BackButton />
             </View>
 

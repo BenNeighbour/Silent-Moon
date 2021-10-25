@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React, { FunctionComponent } from "react";
 import { Home } from "../../screens/home";
 import TabBar from "./tabBar/TabBar";
 

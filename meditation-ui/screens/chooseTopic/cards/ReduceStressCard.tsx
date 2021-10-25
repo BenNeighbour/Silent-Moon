@@ -1,15 +1,14 @@
 import React, { FunctionComponent } from "react";
 import { Text, View } from "react-native";
-import { SvgXml } from "react-native-svg";
 import { styles } from "./cards.styles";
-import { ReduceStressSvg } from "./svg/ReduceStress";
+import ReduceStress from "./svg/ReduceStress.svg";
 
 interface Props {}
 
-const ReduceStressCard: FunctionComponent<Props> = (props) => {
+const ReduceStressCard: FunctionComponent<Props> = () => {
     return (
         <View style={Object.assign({backgroundColor: "#808AFF"}, styles.container)}>
-            <SvgXml style={{marginBottom: 25}} xml={ReduceStressSvg} />
+            <ReduceStress style={{marginBottom: 25}} />
             <Text style={Object.assign({color: "#FFECCC"}, styles.title)}>Reduce Stress</Text>
         </View>
     );
