@@ -6,6 +6,7 @@ import { styles } from "./Home.styles";
 import HomeCard from "./homeCard/HomeCard";
 import RecommendedSection from "./recommendedSection/RecommendedSection";
 import Basics from "./homeCard/svg/Basics.svg";
+import Relaxation from "./homeCard/svg/Relaxation.svg";
 import { Queue } from "react-native-spacing-system";
 
 interface Props { }
@@ -28,7 +29,7 @@ const Home: FunctionComponent<Props> = () => {
                 <View style={styles.cardSection}>
                     <HomeCard title={"Basics"} contentColor={"light"} type={"Course"} backgroundColor={"#8E97FD"} duration={"3-10 min"} svg={Basics} />
                     <Queue size={20} />
-                    <HomeCard title={"Basics"} contentColor={"light"} type={"Course"} backgroundColor={"#8E97FD"} duration={"3-10 min"} svg={Basics} />
+                    <HomeCard title={"Relaxation"} contentColor={"dark"} type={"Music"} backgroundColor={"#FFDB9D"} duration={"3-10 min"} svg={Relaxation} />
                 </View>
 
                 {/* RECOMMENDED SECTION */}

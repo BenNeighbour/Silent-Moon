@@ -2,7 +2,6 @@ import React, { ComponentType, FunctionComponent } from "react";
 import { Text, View } from "react-native";
 import { Button } from "../../../components/button";
 import { styles } from "./HomeCard.styles";
-import Basics from "./svg/Basics.svg";
 
 interface Props {
     title: string;
@@ -17,7 +16,7 @@ const HomeCard: FunctionComponent<Props> = (props) => {
     return (
         <View style={Object.assign({ backgroundColor: props.backgroundColor }, styles.container)}>
             <View style={{ alignSelf: "flex-end" }}>
-                <Basics />
+                <props.svg />
             </View>
 
             <View style={{padding: 15, paddingTop: 0}}>
@@ -28,7 +27,7 @@ const HomeCard: FunctionComponent<Props> = (props) => {
 
                 <View style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                     <Text style={Object.assign({ color: props.contentColor === "light" ? "#EBEAEC" : "#524F53" }, styles.duration)}>{props.duration}</Text>
-                    <Button style={{ flex: 1 }} textColor={"#3F414E"} color={"#EBEAEC"} label={"Start"} padding={6} onPress={() => { }} />
+                    <Button style={{ flex: 1 }} textColor={props.contentColor === "light" ? "#524F53" : "#EBEAEC"} color={props.contentColor === "light" ? "#EBEAEC" : "#524F53"} label={"Start"} padding={6} onPress={() => { }} />
                 </View>
             </View>
         </View>
