@@ -46,10 +46,11 @@ export const styles = StyleSheet.create({
         paddingVertical: 5
     },
     cardSection: {
+        display: "flex",
         paddingHorizontal: 20,
         marginVertical: 10,
         flexDirection: "row",
         width: "100%",
-    },
-    
+        justifyContent: "space-between"
+    }, 
 });

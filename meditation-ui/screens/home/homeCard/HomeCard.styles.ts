@@ -5,36 +5,24 @@ export const styles = StyleSheet.create({
         borderRadius: 10,
         overflow: "hidden",
         flex: 1,
-        height: "100%"
-    },
-    mainSection: {
+        height: "100%",
         display: "flex",
-        flexDirection: "column",
-        paddingHorizontal: 15,
-        paddingVertical: 20,
-        paddingTop: 0,
     },
     title: {
         fontSize: 18,
+        lineHeight: 19,
+        paddingVertical: 7,
         fontWeight: "bold"
     },
     type: {
         fontSize: 11,
+        lineHeight: 12,
         textTransform: "uppercase"
     },
     duration: {
         fontSize: 11,
+        flex: 1,
+        lineHeight: 12,
         textTransform: "uppercase",
     },
-    leftSide: {
-        display: "flex",
-        flex: 3,
-    },
-    rightSide: {
-        display: "flex",
-        flex: 1,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center"
-    }
 });
