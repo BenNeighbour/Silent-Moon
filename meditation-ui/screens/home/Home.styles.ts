@@ -8,11 +8,11 @@ export const styles = StyleSheet.create({
         padding: 0,
         display: "flex",
         backgroundColor: "#FFFFFF",
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
     },
     topSection: {
         display: "flex",
         width: "100%",
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         alignItems: "center",
         alignContent: "center",
         backgroundColor: "transparent",

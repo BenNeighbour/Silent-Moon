@@ -13,29 +13,31 @@ interface Props { }
 
 const Home: FunctionComponent<Props> = () => {
     return (
-        <View style={styles.container}>
+        <View>
             <StatusBar barStyle="dark-content" />
 
-            <View style={styles.topSection}>
-                {/* Top Section */}
-                <LogoDark style={styles.logo} width="170px" />
-            </View>
-
-            <ScrollView bounces={false} style={styles.mainSection}>
-                <Text style={styles.title}>Good Morning, Asfar</Text>
-                <Text style={styles.details}>We Wish you have a good day</Text>
-
-                {/* CARD SECTION */}
-                <View style={styles.cardSection}>
-                    <HomeCard title={"Basics"} contentColor={"light"} type={"Course"} backgroundColor={"#8E97FD"} duration={"3-10 min"} svg={Basics} />
-                    <Queue size={20} />
-                    <HomeCard title={"Relaxation"} contentColor={"dark"} type={"Music"} backgroundColor={"#FFDB9D"} duration={"3-10 min"} svg={Relaxation} />
+            <ScrollView style={styles.container} alwaysBounceVertical={false} bounces={false}>
+                <View style={styles.topSection}>
+                    {/* Top Section */}
+                    <LogoDark style={styles.logo} width="170px" />
                 </View>
 
-                <DailyMeditationCard title={"Daily Thought"} contentColor={"dark"} type={"Meditation"} backgroundColor={"#444359"} duration={"3-10 min"} />
+                <View style={styles.mainSection}>
+                    <Text style={styles.title}>Good Morning, Asfar</Text>
+                    <Text style={styles.details}>We Wish you have a good day</Text>
 
-                {/* RECOMMENDED SECTION */}
-                <RecommendedSection />
+                    {/* CARD SECTION */}
+                    <View style={styles.cardSection}>
+                        <HomeCard title={"Basics"} contentColor={"light"} type={"Course"} backgroundColor={"#8E97FD"} duration={"3-10 min"} svg={Basics} />
+                        <Queue size={20} />
+                        <HomeCard title={"Relaxation"} contentColor={"dark"} type={"Music"} backgroundColor={"#FFDB9D"} duration={"3-10 min"} svg={Relaxation} />
+                    </View>
+
+                    <DailyMeditationCard title={"Daily Thought"} contentColor={"dark"} type={"Meditation"} backgroundColor={"#444359"} duration={"3-10 min"} />
+
+                    {/* RECOMMENDED SECTION */}
+                    <RecommendedSection />
+                </View>
             </ScrollView>
         </View>
     );
