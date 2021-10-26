@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
         margin: 0,
         padding: 0,
         display: "flex",
-        backgroundColor: "#FFFFFF", 
+        backgroundColor: "#FFFFFF",
     },
     topSection: {
         display: "flex",
@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
         zIndex: 3,
         margin: 'auto',
         position: "relative",
-        paddingVertical: 20
+        paddingVertical: 30
     },
     mainSection: {
         display: "flex",
@@ -43,14 +43,13 @@ export const styles = StyleSheet.create({
         fontWeight: "100",
         fontSize: 19,
         paddingHorizontal: 20,
-        paddingVertical: 5
     },
     cardSection: {
         display: "flex",
         paddingHorizontal: 20,
-        marginVertical: 10,
+        marginVertical: 20,
         flexDirection: "row",
         width: "100%",
         justifyContent: "space-between"
-    }, 
+    },
 });
