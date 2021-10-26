@@ -8,26 +8,35 @@ export const styles = StyleSheet.create({
         padding: 0,
         display: "flex",
         backgroundColor: "#FFFFFF",
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-    },
-    topSection: {
-        display: "flex",
-        width: "100%",
-        alignItems: "center",
-        alignContent: "center",
-        backgroundColor: "transparent",
-    },
-    logo: {
-        zIndex: 3,
-        margin: 'auto',
-        position: "relative",
-        paddingVertical: 30
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     },
     mainSection: {
         display: "flex",
         width: "100%",
         flex: 1,
         height: "100%",
-        marginTop: 10
+        marginTop: 10,        
     },
+    title: {
+        width: "100%",
+        color: "#3F414E",
+        fontWeight: "bold",
+        fontSize: 29,
+        textAlign: "center",
+        padding: 5
+    },
+    subtitle: {
+        width: "100%",
+        color: "#A0A3B1",
+        fontWeight: "100",
+        fontSize: 16,
+        textAlign: "center"
+    },
+    titleSection: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        paddingVertical: 20,
+        paddingHorizontal: 20
+    }
 });
