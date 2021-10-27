@@ -8,6 +8,8 @@ import Anxious from "../../assets/meditateCategories/Anxious.svg";
 import Heart from "../../assets/meditateCategories/Heart.svg";
 import Kids from "../../assets/meditateCategories/Kids.svg";
 import Sleep from "../../assets/meditateCategories/Sleep.svg";
+import { PlayCardBanner } from "../../components/playCardBanner";
+import DailyBackground from "./svg/DailyBackground.svg";
 
 interface Props { }
 
@@ -47,7 +49,7 @@ const Meditate: FunctionComponent<Props> = () => {
                     </View>
 
                     <ScrollView contentContainerStyle={{
-                        justifyContent: 'space-evenly',
+                        justifyContent: 'space-evenly'
                     }}
                         horizontal
                         alwaysBounceHorizontal
@@ -63,6 +65,8 @@ const Meditate: FunctionComponent<Props> = () => {
                             ))
                         }
                     </ScrollView>
+
+                    <PlayCardBanner title={"Daily Calm"} contentColor={"dark"} leftSubtext={"Apr 30"} backgroundColor={"#F1DDCF"} rightSubtext={"Pause Practice"} background={DailyBackground} />
                 </View>
             </ScrollView>
         </View>

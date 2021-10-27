@@ -1,4 +1,4 @@
-import React, { ComponentType, FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import { Text, View } from "react-native";
 import { Button } from "../../../components/button";
 import { styles } from "./HomeCard.styles";
@@ -6,7 +6,7 @@ import { styles } from "./HomeCard.styles";
 interface Props {
     title: string;
     type: string;
-    svg: ComponentType;
+    svg: React.ComponentType<any>;
     contentColor: "light" | "dark";
     backgroundColor: string;
     duration: string;

@@ -2,12 +2,13 @@ import React, { FunctionComponent } from "react";
 import { StatusBar, ScrollView, View, Text } from "react-native";
 import { Queue } from "react-native-spacing-system";
 import LogoDark from "../../components/logo/LogoDark.svg";
+import { PlayCardBanner } from "../../components/playCardBanner";
 import { styles } from "./Home.styles";
-import DailyMeditationCard from "./homeCard/dailyMeditationCard/DailyMeditationCard";
 import HomeCard from "./homeCard/HomeCard";
 import Basics from "./homeCard/svg/Basics.svg";
 import Relaxation from "./homeCard/svg/Relaxation.svg";
 import RecommendedSection from "./recommendedSection/RecommendedSection";
+import Background from "./homeCard/svg/DailyMeditationBackground.svg";
 
 interface Props { }
 
@@ -33,7 +34,7 @@ const Home: FunctionComponent<Props> = () => {
                         <HomeCard title={"Relaxation"} contentColor={"dark"} type={"Music"} backgroundColor={"#FFDB9D"} duration={"3-10 min"} svg={Relaxation} />
                     </View>
 
-                    <DailyMeditationCard title={"Daily Thought"} contentColor={"dark"} type={"Meditation"} backgroundColor={"#444359"} duration={"3-10 min"} />
+                    <PlayCardBanner title={"Daily Thought"} contentColor={"light"} leftSubtext={"Meditation"} backgroundColor={"#444359"} rightSubtext={"3-10 min"} background={Background} />
 
                     {/* RECOMMENDED SECTION */}
                     <RecommendedSection />

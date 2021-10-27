@@ -1,9 +1,17 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+    container: {
+        borderRadius: 10, 
+        padding: 20, 
+        marginHorizontal: 20, 
+        overflow: "hidden", 
+        display: "flex", 
+        flexDirection: "row", 
+        justifyContent: "center"
+    },
     cardTitle: {
         width: "100%",
-        color: "#FFFFFF",
         fontWeight: "bold",
         fontSize: 19,
     },
@@ -17,7 +25,6 @@ export const styles = StyleSheet.create({
         display: "flex",
         flex: 1,
         textTransform: "uppercase",
-        color: "#EBEAEC",
         fontSize: 12,
         fontWeight: "300",
         justifyContent: "center",
