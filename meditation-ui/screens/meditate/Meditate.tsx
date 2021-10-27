@@ -3,28 +3,33 @@ import { StatusBar, ScrollView, View, Text } from "react-native";
 import { Queue } from "react-native-spacing-system";
 import { CircularButton } from "../../components/circularButton";
 import { styles } from "./Meditate.styles";
+import All from "../../assets/meditateCategories/All.svg";
+import Anxious from "../../assets/meditateCategories/Anxious.svg";
+import Heart from "../../assets/meditateCategories/Heart.svg";
+import Kids from "../../assets/meditateCategories/Kids.svg";
+import Sleep from "../../assets/meditateCategories/Sleep.svg";
 
 interface Props { }
 
 const categories = [
     {
-        icon: <Fragment />,
+        icon: All,
         name: "All"
     },
     {
-        icon: <Fragment />,
+        icon: Heart,
         name: "My"
     },
     {
-        icon: <Fragment />,
+        icon: Anxious,
         name: "Anxious"
     },
     {
-        icon: <Fragment />,
+        icon: Sleep,
         name: "Sleep"
     },
     {
-        icon: <Fragment />,
+        icon: Kids,
         name: "Kids"
     },
 ]
@@ -40,7 +45,6 @@ const Meditate: FunctionComponent<Props> = () => {
                         <Text style={styles.title}>Meditate</Text>
                         <Text style={styles.subtitle}>we can learn how to recognize when our minds are doing their normal everyday acrobatics.</Text>
                     </View>
-
 
                     <ScrollView contentContainerStyle={{
                         justifyContent: 'space-evenly',

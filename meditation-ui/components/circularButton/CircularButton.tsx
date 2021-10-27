@@ -1,11 +1,10 @@
-import React, { FunctionComponent, ReactNode, useState } from "react";
+import React, { FunctionComponent } from "react";
 import { Pressable, Text, View } from "react-native";
 import { styles } from "./CircularButton.styles";
-import HomeIcon from "../../navigation/mainNavigation/screenIcons/HomeIcon.svg";
 
 interface Props { 
     label: string;
-    icon: ReactNode;
+    icon: React.ComponentType<any>;
     active?: true | false;
 }
 
@@ -22,7 +21,7 @@ const CircularButton: FunctionComponent<Props> = (props) => {
         >
             <View style={styles.tabLogo}>
                 <View style={Object.assign({ backgroundColor: props.active ? "#8E97FD" : "#A0A3B1" }, styles.hoverBackground)} />
-                <HomeIcon fill={"#FFFFFF"} />
+                <props.icon />
             </View>
             <Text style={Object.assign({ color: props.active ? "#3F414E" : "#A0A3B1" }, styles.tabLabel)}>
                 {props.label}
