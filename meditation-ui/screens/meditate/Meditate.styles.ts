@@ -38,5 +38,19 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         paddingVertical: 20,
         paddingHorizontal: 20
-    }
+    },
+    optionsTable: {
+        display: "flex",
+        flexDirection: "row",
+        width: "100%",
+        height: "100%",
+        justifyContent: "space-between",
+        alignContent: "stretch",
+        paddingHorizontal: 20,
+        paddingVertical: 20
+    },
+    column: {
+        flex: 1,
+        display: "flex",
+    },
 });

@@ -17,7 +17,7 @@ const Home: FunctionComponent<Props> = () => {
         <View>
             <StatusBar barStyle="dark-content" />
 
-            <ScrollView style={styles.container} alwaysBounceVertical={false} bounces={false}>
+            <ScrollView stickyHeaderIndices={[0]} style={styles.container} alwaysBounceVertical={false} bounces={false}>
                 <View style={styles.topSection}>
                     {/* Top Section */}
                     <LogoDark style={styles.logo} width="170px" />

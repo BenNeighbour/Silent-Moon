@@ -10,6 +10,8 @@ import Kids from "../../assets/meditateCategories/Kids.svg";
 import Sleep from "../../assets/meditateCategories/Sleep.svg";
 import { PlayCardBanner } from "../../components/playCardBanner";
 import DailyBackground from "./svg/DailyBackground.svg";
+import { OpacityCard } from "../../components/opacityCard";
+import Background from "./Background.png";
 
 interface Props { }
 
@@ -67,6 +69,17 @@ const Meditate: FunctionComponent<Props> = () => {
                     </ScrollView>
 
                     <PlayCardBanner title={"Daily Calm"} contentColor={"dark"} leftSubtext={"Apr 30"} backgroundColor={"#F1DDCF"} rightSubtext={"Pause Practice"} background={DailyBackground} />
+
+                    {/* CARD SECTION */}  
+                    <View style={styles.optionsTable}>
+                        <View style={styles.column}>
+                            <OpacityCard title={"7 Days of Calm"} background={Background} />
+                        </View>
+                        <Queue size={20} />
+                        <View style={styles.column}>
+                            <OpacityCard title={"7 Days of Calm"} background={Background} />
+                        </View>
+                    </View>
                 </View>
             </ScrollView>
         </View>

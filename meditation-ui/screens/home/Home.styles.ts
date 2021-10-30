@@ -8,20 +8,22 @@ export const styles = StyleSheet.create({
         padding: 0,
         display: "flex",
         backgroundColor: "#FFFFFF",
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
     },
     topSection: {
         display: "flex",
         width: "100%",
         alignItems: "center",
         alignContent: "center",
-        backgroundColor: "transparent",
+        backgroundColor: "white",
+        paddingVertical: 10,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        marginVertical: 10
     },
     logo: {
         zIndex: 3,
         margin: 'auto',
         position: "relative",
-        paddingVertical: 30
+        paddingVertical: 0
     },
     mainSection: {
         display: "flex",
