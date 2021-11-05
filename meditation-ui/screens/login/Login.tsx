@@ -4,6 +4,7 @@ import { StatusBar, Text, View } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { BackButton } from "../../components/backButton";
 import { FacebookButton, GoogleButton } from "../../components/socialButton";
+import { SignIn } from "../../service";
 import LoginForm from "./form/LoginForm";
 import { styles } from "./Login.styles";
 import TopSection from "./TopSection/TopSection.svg";
@@ -33,9 +34,7 @@ const Login: FunctionComponent<Props> = (props) => {
                     <Text style={styles.loginWithEmailText}>Or log in with email</Text>
                     <View style={styles.formSection}>
                         {/* LOGIN FORM SECTION */}
-                        <LoginForm onSubmit={() => {
-                            navigation.navigate("Welcome");
-                        }} />
+                        <LoginForm onSubmit={(fields) => SignIn(fields, navigation)} />
                     </View>
 
                 </View>

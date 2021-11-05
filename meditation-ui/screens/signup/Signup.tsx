@@ -4,6 +4,7 @@ import { StatusBar, Text, View } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { BackButton } from "../../components/backButton";
 import { FacebookButton, GoogleButton } from "../../components/socialButton";
+import { SignUp } from "../../service";
 import TopSection from "../login/TopSection/TopSection.svg";
 import SignupForm from "./form/SignupForm";
 import { styles } from "./Signup.styles";
@@ -16,7 +17,7 @@ const Signup: FunctionComponent<Props> = (props) => {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" />
-            
+
             <View style={styles.topSection}>
                 <TopSection style={styles.topSectionBackdrop} />
                 <BackButton />
@@ -33,9 +34,7 @@ const Signup: FunctionComponent<Props> = (props) => {
                     <Text style={styles.loginWithEmailText}>Or log in with email</Text>
                     <View style={styles.formSection}>
                         {/* SIGNUP FORM SECTION */}
-                        <SignupForm onSubmit={() => {
-                            navigation.navigate("Welcome");
-                        }} />
+                        <SignupForm onSubmit={(fields) => SignUp(fields, navigation)} />
                     </View>
                 </View>
             </KeyboardAwareScrollView>

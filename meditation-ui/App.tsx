@@ -9,6 +9,10 @@ import { Login } from './screens/login';
 import { Onboarding } from './screens/onboarding';
 import { Signup } from './screens/signup';
 import { Welcome } from './screens/welcome';
+import config from './aws-exports';
+import Amplify from '@aws-amplify/core';
+
+Amplify.configure(config);
 
 enableScreens();
 

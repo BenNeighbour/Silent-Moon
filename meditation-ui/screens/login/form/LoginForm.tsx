@@ -5,18 +5,18 @@ import { Button } from "../../../components/button";
 import { Input } from "../../../components/input";
 
 interface Props {
-    onSubmit: () => any;
+    onSubmit: (fields: any) => any;
 }
 
 const LoginForm: FunctionComponent<Props> = (props) => {
     return (
         <Formik
-            initialValues={{ email: '', password: '' }}
-            onSubmit={_ => props.onSubmit()}
+            initialValues={{ username: '', password: '' }}
+            onSubmit={fields => props.onSubmit(fields)}
         >
             {({ handleChange, handleBlur, handleSubmit, values }) => (
                 <View>
-                    <Input style={{ marginVertical: 10 }} onChangeText={handleChange('email')} onBlur={handleBlur('email')} placeholder={"Email address"} value={values.email} />
+                    <Input style={{ marginVertical: 10 }} onChangeText={handleChange('username')} onBlur={handleBlur('username')} placeholder={"Email address"} value={values.username} />
                     <Input style={{ marginVertical: 10 }} secureTextEntry onChangeText={handleChange('password')} onBlur={handleBlur('password')} placeholder={"Password"} value={values.password} />
 
                     <Button style={{ marginVertical: 10 }} label={"Log In"} onPress={handleSubmit} />

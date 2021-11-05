@@ -22,14 +22,13 @@ const Input: FunctionComponent<Props> = (props) => {
     return (
         <View style={{ ...props.style, ...styles.input }}>
             <TextInput
-                secureTextEntry
                 {...props}
                 style={{ flex: 1, paddingVertical: 20, fontSize: 16 }}
                 editable
                 focusable
             />
 
-            {props.withAsyncValidation ? props.secureTextEntry ? <PasswordSymbol  onPress={() => {
+            {props.withAsyncValidation ? props.secureTextEntry ? <PasswordSymbol onPress={() => {
                 if (props.secureTextEntry) setIsSecureEntry(!secureTextEntry);
             }} style={{
                 alignSelf: "center",
