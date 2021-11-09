@@ -29,7 +29,7 @@
     "react-native-screens": "~3.4.0",
     "react-native-shadow": "^1.2.2",
     "react-native-spacing-system": "^2.0.0-rc.0",
-    "react-native-svg": "^12.1.1",
+    "react-native-svg": "9.8.4",
     "react-native-svg-transformer": "^0.14.3",
     "react-native-web": "~0.13.12"
   },
