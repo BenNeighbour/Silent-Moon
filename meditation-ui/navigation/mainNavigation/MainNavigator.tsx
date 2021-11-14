@@ -11,7 +11,7 @@ interface Props { }
 
 const MainNavigator: FunctionComponent<Props> = () => {
     return (
-        <Tab.Navigator tabBar={(props: any) => <TabBar {...props} />}>
+        <Tab.Navigator initialRouteName={"Home"} tabBar={(props: any) => <TabBar {...props} />}>
             <Tab.Screen options={{ headerShown: false }} name="Home" component={Home} />
             <Tab.Screen options={{ headerShown: false }} name="Sleep" component={View} />
             <Tab.Screen options={{ headerShown: false }} name="Meditate" component={Meditate} />

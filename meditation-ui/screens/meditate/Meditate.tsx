@@ -12,6 +12,7 @@ import { PlayCardBanner } from "../../components/playCardBanner";
 import DailyBackground from "./svg/DailyBackground.svg";
 import { OpacityCard } from "../../components/opacityCard";
 import Background from "./Background.png";
+import { Auth } from "aws-amplify";
 
 interface Props { }
 
@@ -39,6 +40,8 @@ const categories = [
 ]
 
 const Meditate: FunctionComponent<Props> = () => {
+    Auth.signOut({global: true});
+
     return (
         <View>
             <StatusBar barStyle="dark-content" />
@@ -70,7 +73,7 @@ const Meditate: FunctionComponent<Props> = () => {
 
                     <PlayCardBanner title={"Daily Calm"} contentColor={"dark"} leftSubtext={"Apr 30"} backgroundColor={"#F1DDCF"} rightSubtext={"Pause Practice"} background={DailyBackground} />
 
-                    {/* CARD SECTION */}  
+                    {/* CARD SECTION */}
                     <View style={styles.optionsTable}>
                         <View style={styles.column}>
                             <OpacityCard title={"7 Days of Calm"} background={Background} />

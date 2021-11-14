@@ -5,28 +5,12 @@ import { Button } from "../../../components/button";
 import { Checkbox } from "../../../components/checkbox";
 import { Input } from "../../../components/input";
 import { styles } from "./SignupForm.styles";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface Props {
     onSubmit: (fields: any) => any;
 }
 
-function logCurrentStorage() {
-  AsyncStorage.getAllKeys().then((keyArray: any) => {
-    AsyncStorage.multiGet(keyArray).then((keyValArray: any) => {
-      let myStorage: any = {};
-      for (let keyVal of keyValArray) {
-        myStorage[keyVal[0]] = keyVal[1]
-      }
-
-      console.log('CURRENT STORAGE: ', myStorage);
-    })
-  });
-}
-
 const SignupForm: FunctionComponent<Props> = (props) => {
-    logCurrentStorage();
-
     return (
         <Formik
             initialValues={{ name: '', email: '', password: '', hasReadPrivacyPolicy: true }}
@@ -43,7 +27,6 @@ const SignupForm: FunctionComponent<Props> = (props) => {
                             {/* TODO: Open Web Browser */ }
                         }}>Privacy Policy</Text></Text>
                     </Checkbox>
-
 
                     <Button style={{ marginVertical: 10 }} label={"Get Started"} onPress={handleSubmit} />
                 </View>
